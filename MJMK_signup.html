@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <link href="signup_style.css" rel="stylesheet" />
     <title>회원가입 페이지</title>
 </head>
@@ -17,8 +20,49 @@
         <option>컴퓨터공학과</option>
         <option>시각디자인과</option>
     </select>
-    
-    <button id="btn-email-send" class="btn-email">인증메일<br>보내기</button>
+    <script type = "text/babel">
+        class App extends React.Component {
+        constructor(props) {
+            super(props);
+            this.sendEmail = this.sendEmail.bind(this)
+            this.state = {
+                email: '',
+                usingemail: false, // 인증번호가 맞아서 가입가능한가??
+                number: '',      //보내진 인증번호
+                inputnumber: '', //내가 입력한 인증번호
+                             // 이 두개가 똑같아야 한다
+            }
+        }
+        render() {
+            return <button onClick = {this.sendEmail}></button>
+        }
+        sendEmail (event) {
+            event.preventDefault();
+            console.log(this.state.email);
+            const data = {
+                email: this.state.email           //입력한 email state값
+            }
+
+        fetch('ec2-43-201-82-81.ap-northeast-2.compute.amazonaws.com:8080/auth/register/mail',{
+            method: "post",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+        })
+        .then(res => res.json())
+        .then(json => {
+            this.setState({
+                number: json.number,       //number이름의 state값에 생성한 인증번호를 받아옴
+            })
+
+            console.log(this.state.number);
+        })
+        
+        }
+    }
+    const container = document.getElementById('root')
+    ReactDOM.render(<App/>, container)
+    </script>
+    <button id="btn-email-send" id = "root" class="btn-email">인증메일<br>보내기</button>
     <button id="btn-email-check" class="btn-email"btn-email>확인</button>
     <input id="finish" type="submit" value="가입하기">
     <a href="#"><img class="MJMK" src="/images/mjuMark.png" alt="MJMK 로고"></a>
