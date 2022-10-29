@@ -1,31 +1,50 @@
 <!DOCTYPE html>
 <html>   
 <head>
-    <title>Document</title>
+    <title>login</title>
     <link rel = "stylesheet" href="log.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
 </head>
+<!--<script src="/script.js"></script>-->
 <body>
     <section class="login-form">
         <h1>LOGIN</h1>
         <img src = "images/mjuMark.png">
-        <form action ="">
+        <form method="post" action ="http://ec2-43-201-82-81.ap-northeast-2.compute.amazonaws.com:8080/auth/login">
             <div class = "int-area">
-                <input type = "text" name = "id" id = "id"
+                <input type = "text" name = "email" id = "email"
                 autocomplete="off" required>
-                <label for = "id">email</label> 
+                <label for = "email">email</label> 
             </div>
             <div class = "int-area">
-                <input type = "password" name = "pw" id = "pw"
+                <input type = "password" name = "password" id = "password"
                 autocomplete="off" required>
-                <label for = "id">password</label> 
+                <label for = "password">password</label> 
             </div>
             <div class="btn">
-                <button type = " submit" ><a href="./MJMK_signup.html">SIGNUP</a></button>
+                <button><a href="./MJMK_signup.html">SIGNUP</a></button>
             </div>
             <div>
-                <button type = "submit">LOGIN</button>
+                <input type = "submit" value="LOGIN" onclick="submitData()">
             </div>
-        </form>    
+        </form>
     </section>
+
+    <script>
+function submitData(){
+    var email = $('#email').val();
+    var password = $('#password').val();
+
+    jsonObject = {
+        "email":"",
+        "password":""
+    }
+    jsonObject.email=email;
+    jsonObject.password=password;
+
+    var str=JSON.stringify(jsonObject)
+}
+    </script>
 </body>
 </html>
