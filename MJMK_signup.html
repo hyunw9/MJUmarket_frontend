@@ -1,43 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-    crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link href="signup_style.css" rel="stylesheet" />
-    <title>회원가입 페이지</title>
-</head>
-<body>
-    <h1>회원가입</h1>
-    <input id="useremail" class="input-area" type="email" pattern=".+@mju\.ac\.kr" placeholder="example@mju.ac.kr" required>
-    <input id="useremail-ckeck" class="input-area" type="text" placeholder="인증번호 입력">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="signup_style.css" rel="stylesheet" />
+        <title>회원 가입 페이지</title>
+    </head>
+    <body>
+        <input type="email" id="useremail" class="input-area" pattern=".+@mju\.ac\.kr" placeholder="example@mju.ac.kr" required>
+        <input type="button" id="btn-email-send" value="인증메일1 보내기" class="btn-email">
+        
+        <input id="useremail-ckeck" class="input-area" type="text" placeholder="인증번호 입력">
+        <button id="btn-email-check" class="btn-email">확인</button>
+        
     <input id="username" class="input-area" type="text" placeholder="닉네임">
-    <input id="userpassward" class="input-area" type="password" placeholder="비밀번호" minlength="6">
+    <input id="userpassward" class="input-area" type="password" placeholder="비밀번호">
     <input id="userpassward-check" class="input-area" type="password" placeholder="비밀번호확인">
+    
     <select id="userdepartment" class="input-area" >
         <option selected disabled>-학과를 선택하세요-</option>
         <option>컴퓨터공학과</option>
         <option>시각디자인과</option>
     </select>
-    <script>
-        console.log("인증번호 발송")
-        function sendEmail(){
-            var mail = $('#useremail').val();
-        
-            jsonObject = {
-                "mail":""
-            }
-            jsonObject.mail=mail;
-            
-            var str=JSON.stringify(jsonObject)
-        }
-    </script>
-    <form method="post" action="http://ec2-43-201-82-81.ap-northeast-2.compute.amazonaws.com:8080/auth/register/mail">
-    <button id="btn-email-send" class="btn-email" onclick="sendEmail()">인증메일<br>보내기</button>
-    <button id="btn-email-check" class="btn-email"btn-email>확인</button>
+    
     <input id="finish" type="submit" value="가입하기">
-    <a href="#"><img class="MJMK" src="/images/mjuMark.png" alt="MJMK 로고"></a>
-    </form>
-
+    <a href="./index.html"><img class="MJMK" src="/images/mjuMark.png" alt="MJMK 로고"></a>
+    
+    <script src="script_signup.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </body>
 </html>
