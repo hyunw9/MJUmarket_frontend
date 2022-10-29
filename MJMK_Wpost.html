@@ -12,7 +12,7 @@
 <body>
     <a href="./MJMK_department.html"><img class="MJMK" src="/images/mjuMark.png" alt="MJMK 로고"></a>
     <main>
-    <form action="">
+    <form method="post" action="http://ec2-43-201-82-81.ap-northeast-2.compute.amazonaws.com:8080/post/article">
     <div id="body-title"><strong>글쓰기</strong></div>
     <input id="post-title" type="text" placeholder="제목을 입력하세요 ">
     <label for="file">
@@ -21,9 +21,7 @@
     <a style="color: white">가격: </a><input id="price" type="number" placeholder="">
     <input type="file" name="file" id="file">
     <textarea id="post-body" placeholder="내용을 입력하세요"></textarea>
-    <a href="./MJMK_Rpost.html">
-        <input id="fin" value="완료" type="submit" onclick="submitData() ">
-    </a>
+    <input id="fin" value="완료" type="submit" onclick="submitData() ">
 </form>
 </main>
 <script>
