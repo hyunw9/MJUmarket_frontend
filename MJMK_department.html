@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <link href="department_style.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,6 +46,24 @@
         </a>
     </div>
     </main>
-
+    <script>
+    axios({
+	        method: 'get',
+	        url: 'ec2-43-201-82-81.ap-northeast-2.compute.amazonaws.com:8080/post/',
+	        params: {
+                "pid":2, //postId
+	            "postTitle":"postTitle",   //제목
+	            "postBody":"postBody",      //글
+	            "username":"username"      //이름
+	        }
+    })
+    .then(function (response) {
+	    console.log(response);
+    })
+    .catch(function (error) {
+	    console.log(error);
+    });
+         
+    </script>
 </body>
 </html>
