@@ -3,9 +3,10 @@
 <head>
     <title>login</title>
     <link rel = "stylesheet" href="log.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
 </head>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="/script.js"></script>
+<!--<script src="/script.js"></script>-->
 <body>
     <section class="login-form">
         <h1>LOGIN</h1>
@@ -17,7 +18,7 @@
                 <label for = "email">email</label> 
             </div>
             <div class = "int-area">
-                <input type = "password" name = "pw" id = "pw"
+                <input type = "password" name = "password" id = "password"
                 autocomplete="off" required>
                 <label for = "password">password</label> 
             </div>
@@ -25,9 +26,26 @@
                 <button><a href="./MJMK_signup.html">SIGNUP</a></button>
             </div>
             <div>
-                <button type = "submit">LOGIN</button>
+                <input type = "button" id="submit" value="LOGIN" onclick="submitData()">
             </div>
-        </form>    
+        </form>
     </section>
+
+    <script>
+function submitData(){
+    var email = $('#email').val();
+    var password = $('#password').val();
+
+    jsonObject = {
+        "email":"",
+        "password":""
+    }
+    jsonObject.email=email;
+    jsonObject.password=password;
+
+    var str=JSON.stringify(jsonObject);
+document.write(str);
+}
+    </script>
 </body>
 </html>
