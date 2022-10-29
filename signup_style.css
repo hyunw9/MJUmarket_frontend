@@ -1,6 +1,13 @@
 * {
   box-sizing: border-box;
 }
+#message{
+  font-size: 2vh;
+  top: 41%;
+  left: 35%;
+  color: white;
+  position: absolute;
+}
 body {
   background-image: url('images/mjuBackground.png');
   font-size: 14px;
