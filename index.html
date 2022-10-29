@@ -43,7 +43,7 @@ function submitData(){
     jsonObject.email=email;
     jsonObject.password=password;
 
-    var str=jsonObject;
+    var str=JSON.stringify(jsonObject)
 document.write(str);
 }
     </script>
