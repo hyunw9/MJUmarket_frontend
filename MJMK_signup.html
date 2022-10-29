@@ -33,8 +33,12 @@
             var str=JSON.stringify(jsonObject)
         }
     </script>
-    <button id="btn-email-send" class="btn-email" onclick="sendEmail()">인증메일<br>보내기</button>
-    <button id="btn-email-check" class="btn-email"btn-email>확인</button>
+    <label for="useremail">
+        <button id="btn-email-send" class="btn-email" onclick="sendEmail()">인증메일<br>보내기</button>
+    </label>
+    <label for="useremail-ckeck">
+        <button id="btn-email-check" class="btn-email"btn-email>확인</button>
+    </label>
     <input id="finish" type="submit" value="가입하기">
     <a href="#"><img class="MJMK" src="/images/mjuMark.png" alt="MJMK 로고"></a>
 </form>
