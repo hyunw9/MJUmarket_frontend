@@ -9,7 +9,6 @@
 </head>
 <body>
     <h1>회원가입</h1>
-<form method="post" action="http://ec2-43-201-82-81.ap-northeast-2.compute.amazonaws.com:8080/auth/register/mail">
     <input id="useremail" class="input-area" type="email" pattern=".+@mju\.ac\.kr" placeholder="example@mju.ac.kr" required>
     <input id="useremail-ckeck" class="input-area" type="text" placeholder="인증번호 입력">
     <input id="username" class="input-area" type="text" placeholder="닉네임">
@@ -23,24 +22,22 @@
     <script>
         console.log("인증번호 발송")
         function sendEmail(){
-            var email = $('#useremail').val();
+            var mail = $('#useremail').val();
         
             jsonObject = {
-                "email":""
+                "mail":""
             }
-            jsonObject.email=email;
+            jsonObject.mail=mail;
             
             var str=JSON.stringify(jsonObject)
         }
     </script>
-    <label for="useremail">
-        <button id="btn-email-send" class="btn-email" onclick="sendEmail()">인증메일<br>보내기</button>
-    </label>
-    <label for="useremail-ckeck">
-        <button id="btn-email-check" class="btn-email"btn-email>확인</button>
-    </label>
+    <form method="post" action="http://ec2-43-201-82-81.ap-northeast-2.compute.amazonaws.com:8080/auth/register/mail">
+    <button id="btn-email-send" class="btn-email" onclick="sendEmail()">인증메일<br>보내기</button>
+    <button id="btn-email-check" class="btn-email"btn-email>확인</button>
     <input id="finish" type="submit" value="가입하기">
     <a href="#"><img class="MJMK" src="/images/mjuMark.png" alt="MJMK 로고"></a>
-</form>
+    </form>
+
 </body>
 </html>
