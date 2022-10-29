@@ -20,7 +20,7 @@ jQuery.fn.serializeObject = function() {
 
       $.ajax({
           type : 'post',
-          url : '/test.jsp',
+          url : 'http://ec2-43-201-82-81.ap-northeast-2.compute.amazonaws.com:8080/auth/login',
           data : JSON.stringify(serializedValues2),
           dataType : 'json',
           error: function(xhr, status, error){
@@ -32,4 +32,3 @@ jQuery.fn.serializeObject = function() {
       });
 
   }
-
