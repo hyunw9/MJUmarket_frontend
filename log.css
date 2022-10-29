@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("../images/v85_55.png") no-repeat center;
+    background-size: cover;
+}
+body::before {
+    content: "";
+    position: absolute; z-index: 1;
+    top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.login-form {position: relative; z-index: 2;}
+.login-form h1 {
+    font-size: 50px; color: #fff;
+    text-align: center;
+}
+.login-form img {
+    width: 150px;
+    position: absolute;
+    top: 25%;
+    left: -40%;
+    float: left;
+}
+.int-area {width: 400px;}
+
+/*검색창 크기*/
+.int-area input {
+    width: 100%;
+    padding: 20px 10px 10px;    
+}
+/*레이블 (email, pw)*/
+.int-area label {
+    font-size: 20px; color: #fff;
+}
