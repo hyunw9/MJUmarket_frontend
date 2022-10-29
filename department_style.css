@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-image: url('images/mjuBackground.png');
+    font-size: 14px;
+    background-size: cover;
+    background-color: rgb(49,89,158);
+    background-repeat: no-repeat;
+    overflow: scroll;
+    overflow-x: auto;
+    margin: 0 0 0 0;
+}
+main{
+    background-color: white;
+    margin: 0 20% 0 20%;
+    padding: 20px 0 20px 0;
+}
+.MJMK{
+    position: absolute;
+    width: 10%;
+}
+#userdepartment {
+    display: block;
+    border:0;
+    outline: 0;
+    width: 25%;
+    height: 30px;
+    background-color: rgb(230, 236, 240);
+    margin: 0 0 10px 10%;
+}
+#search-place{
+    margin-left: 10%;
+    width: 325px;
+    padding: 10px;
+    border: 1px solid rgb(49,89,158);
+    outline: none;
+    margin: 0 0 10px 10%;
+}
+#search{
+    width: 50px;
+    height: 100%;
+    padding: 10px;
+    border: 0;
+    background: rgb(49,89,158);
+    outline: none;
+    color: white;
+}
+#wBtn{
+    position: absolute;
+    bottom:21%;
+    left: 1%;
+    width: 150px;
+    height: 40px;
+    font-size: 17px;
+    background-color: rgb(255, 255, 255);
+    border: 0;
+    outline: none;
+}
+#mypage{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    bottom:5%;
+    left:1%;
+    height: 100px;
+    width: 15%;
+}
+#my-pro{
+    background-color: aqua;
+    margin: 8px;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+}
+.flexBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.post{
+    background-color: rgb(230, 236, 240);
+    width:80%;
+    height: 180px;
+    margin: 0 0 10px 0;
+}
+.post-pic{
+    margin: 15px 15px 15px 15px;
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    float: left;
+}
+.post-title{
+    font-size: 20px;
+    margin: 20px 0 20px 20px;
+}
+.state_now{
+    background-color: rgb(194, 197, 216);
+    color: white;
+    float: right;
+    width: 120px;
+    height: 40px;
+    margin:8px
+}
+a{
+    text-decoration-line: none;
+    color: black;
+}

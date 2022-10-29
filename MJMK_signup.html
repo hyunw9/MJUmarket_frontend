@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link href="signup_style.css" rel="stylesheet" />
+    <title>회원가입 페이지</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+<form action="#">
+    <input id="useremail" class="input-area" type="email" pattern=".+@mju\.ac\.kr" placeholder="example@mju.ac.kr" required>
+    <input id="useremail-ckeck" class="input-area" type="text" placeholder="인증번호 입력">
+    <input id="username" class="input-area" type="text" placeholder="닉네임">
+    <input id="userpassward" class="input-area" type="password" placeholder="비밀번호" minlength="6">
+    <input id="userpassward-check" class="input-area" type="password" placeholder="비밀번호확인">
+    <select id="userdepartment" class="input-area" >
+        <option selected disabled>-학과를 선택하세요-</option>
+        <option>컴퓨터공학과</option>
+        <option>시각디자인과</option>
+    </select>
+    
+    <button id="btn-email-send" class="btn-email">인증메일<br>보내기</button>
+    <button id="btn-email-check" class="btn-email"btn-email>확인</button>
+    <input id="finish" type="submit" value="가입하기">
+    <a href="#"><img class="MJMK" src="/images/mjuMark.png" alt="MJMK 로고"></a>
+</form>
+</body>
+</html>

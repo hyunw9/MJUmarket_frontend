@@ -1,0 +1,69 @@
+body {
+    background-image: url('images/mjuBackground.png');
+    font-size: 14px;
+    background-size: cover;
+    background-color: rgb(49,89,158);
+    background-repeat: no-repeat;
+    overflow: scroll;
+    overflow-x: auto;
+    margin: 0 0 0 0;
+}
+.MJMK{
+    position: absolute;
+    width: 10%;
+}
+#post-pic{
+    position:absolute;
+    top:23%;
+    left: 18%;
+    width: 300px;
+    height: 300px;
+    background-color: aliceblue;
+    float: left;
+}
+#post-title{
+    position:absolute;
+    top:21%;
+    left: 45%;
+    width: 500px;
+    height: 40px;
+    background-color: aliceblue;
+}
+#post-title-p{
+    position:absolute;
+    top:19%;
+    left: 42%;
+    color:white;
+    font-size: 17px;
+}
+#price{
+    position:absolute;
+    top:29%;
+    left: 45%;
+    width: 500px;
+    height: 40px;
+    background-color: aliceblue;
+}
+#price-p{
+    position:absolute;
+    top:27%;
+    left: 42%;
+    color:white;
+    font-size: 17px;
+}
+#post-content{
+    position:absolute;
+    top:38%;
+    left: 45%;
+    width: 500px;
+    height: 300px;
+    background-color: aliceblue;
+}
+#sold-state{
+    position:absolute;
+    bottom:10%;
+    left: 71%;
+    width: 100px;
+    height: 40px;
+    background-color: aliceblue;
+}

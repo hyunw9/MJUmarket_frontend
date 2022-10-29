@@ -1,0 +1,65 @@
+body {
+    background-image: url('images/mjuBackground.png');
+    font-size: 14px;
+    background-size: cover;
+    background-color: rgb(49,89,158);
+    background-repeat: no-repeat;
+    overflow: scroll;
+    overflow-x: auto;
+    margin: 0 0 0 0;
+}
+.MJMK{
+    position: absolute;
+    width: 10%;
+}
+main{
+    margin: 0 0 0 25%;
+    padding: 20px 0 20px 0;
+}
+#body-title{
+    color:white;
+    font-size: 50px;
+    margin: 10px;
+}
+#post-title{
+    margin: 10px;
+    width: 60%;
+    height: 40px;
+}
+.insert-picture{
+    line-height: 90px;
+    text-align: center;
+    font-size: 20px;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(216, 223, 239);
+}
+#file{
+    display: none;
+}
+textarea{
+    margin: 20px 0 0 8px;
+    display: block;
+    width: 70%;
+    height: 300px;
+}
+#fin{
+    background-color: white;
+    position: absolute;
+    right: 17%;
+    bottom: 5%;
+    width: 130px;
+    height: 50px;
+    text-align: center;
+    line-height: 200%;
+    text-decoration-line: none;
+    font-size: 2vh;
+    outline: none;
+    border: 0;
+    color: black;
+    
+}#fin:hover{
+    color:white;
+    background-color: rgb(51, 75, 145);
+}
