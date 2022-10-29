@@ -6,18 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>글쓰기</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
 </head>
 <body>
     <a href="./MJMK_department.html"><img class="MJMK" src="/images/mjuMark.png" alt="MJMK 로고"></a>
     <main>
+    <form action="">
     <div id="body-title"><strong>글쓰기</strong></div>
     <input id="post-title" type="text" placeholder="제목을 입력하세요 ">
     <label for="file">
         <div class="insert-picture">파일첨부</div>
     </label>
+    <a style="color: white">가격: </a><input id="price" type="number" placeholder="">
     <input type="file" name="file" id="file">
-    <textarea placeholder="내용을 입력하세요"></textarea>
-    <a href="./MJMK_Rpost.html" id="fin">완료</a>
+    <textarea id="post-body" placeholder="내용을 입력하세요"></textarea>
+    <a href="./MJMK_Rpost.html">
+        <input id="fin" value="완료" type="submit" onclick="submitData() ">
+    </a>
+</form>
 </main>
+<script>
+    function submitData(){
+        var postTitle = $('#post-title').val();
+        var postBody = $('#post-body').val();
+        var price = $('#price').val();
+    
+        jsonObject = {
+            "postTitle":"",
+            "postBody":"",
+            "price":""
+        }
+        jsonObject.postTitle=postTitle;
+        jsonObject.postBody=postBody;
+        jsonObject.price=price;
+    
+        var str=JSON.stringify(jsonObject)
+    }
+</script>
 </body>
 </html>
