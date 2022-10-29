@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="signup_style.css" rel="stylesheet" />
         <title>회원 가입 페이지</title>
-    </head>
-    <body>
-        <input type="email" id="useremail" class="input-area" pattern=".+@mju\.ac\.kr" placeholder="example@mju.ac.kr" required>
-        <input type="button" id="btn-email-send" value="인증메일1 보내기" class="btn-email">
-        
-        <input id="useremail-ckeck" class="input-area" type="text" placeholder="인증번호 입력">
-        <button id="btn-email-check" class="btn-email">확인</button>
-        
+</head>
+<body>
+    <input type="email" id="useremail" class="input-area" pattern=".+@mju\.ac\.kr" placeholder="example@mju.ac.kr" required>
+    <input type="button" id="btn-email-send" value="인증메일1 보내기" class="btn-email">
+
+    <input id="useremail-ckeck" class="input-area" type="text" placeholder="인증번호 입력">
+    <button id="btn-email-check" class="btn-email">확인</button>
+
     <input id="username" class="input-area" type="text" placeholder="닉네임">
     <input id="userpassward" class="input-area" type="password" placeholder="비밀번호">
     <input id="userpassward-check" class="input-area" type="password" placeholder="비밀번호확인">
-    
+
     <select id="userdepartment" class="input-area" >
         <option selected disabled>-학과를 선택하세요-</option>
         <option>컴퓨터공학과</option>
         <option>시각디자인과</option>
     </select>
-    
+
     <input id="finish" type="submit" value="가입하기">
     <a href="./index.html"><img class="MJMK" src="/images/mjuMark.png" alt="MJMK 로고"></a>
-    
-    <script src="script_signup.js"></script>
+
+    <script src="script.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </body>
 </html>

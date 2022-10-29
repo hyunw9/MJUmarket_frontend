@@ -1,4 +1,4 @@
-const sendBtn = document.querySelector("#btn-email-check")
+const sendBtn = document.querySelector("#btn-email-send")
 const randomId_ = String(Math.floor(Math.random()*(9-0)+1))+String(Math.floor(Math.random()*(9-0)+1))+String(Math.floor(Math.random()*(9-0)+1))+String(Math.floor(Math.random()*(9-0)+1))+String(Math.floor(Math.random()*(9-0)+1))+String(Math.floor(Math.random()*(9-0)+1));
 
 sendBtn.addEventListener('click', ()=>{
