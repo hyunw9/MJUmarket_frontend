@@ -1,4 +1,26 @@
-async function postData(inputEmail, inputPw) {
+function submitData(){
+            
+  const email = document.getElementById("email");
+  const password = document.getElementById('password')
+  axios({
+      method:"POST",
+      url: 'ec2-3-35-149-126.ap-northeast-2.compute.amazonaws.com:8080/auth/login',
+      data:{
+          "email": email.value,
+          "password": password.value
+      }
+  }).then((res)=>{
+      console.log(res);
+  }).catch(error=>{
+      console.log(error);
+      throw new Error(error);
+  });
+}
+
+
+
+
+/*async function postData(inputEmail, inputPw) {
   try {
     //응답 성공
     const response = await axios.post(
@@ -32,3 +54,4 @@ async function submitData() {
 export default {
   submitData,
 };
+*/
