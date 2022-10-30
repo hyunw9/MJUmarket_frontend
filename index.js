@@ -15,3 +15,21 @@ async function postData(inputEmail, inputPw) {
     console.error(error);
   }
 }
+async function submitData() {
+  var email = $("#email").val();
+  var password = $("#password").val();
+
+  jsonObject.email = email;
+  jsonObject.password = password;
+
+  var str = JSON.stringify(jsonObject);
+  //응답 성공
+  const response = await axios
+    .post(
+      "http://ec2-3-35-149-126.ap-northeast-2.compute.amazonaws.com:8080/auth/login",
+      { email, password } //보내고자 하는 데이터
+    )
+    .then(function (response) {
+      console.log(response.data);
+    });
+}
