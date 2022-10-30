@@ -1,5 +1,3 @@
-const axios = require("axios");
-
 async function postData(inputEmail, inputPw) {
   try {
     //응답 성공
