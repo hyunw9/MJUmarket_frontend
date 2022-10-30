@@ -8,6 +8,7 @@
         <title>회원 가입 페이지</title>
 </head>
 <body>
+    <div id="body-title"><strong>회원가입</strong></div>
     <input type="email" id="useremail" class="input-area" pattern=".+@mju\.ac\.kr" placeholder="example@mju.ac.kr" required>
     <input type="button" id="btn-email-send" value="인증메일 보내기" class="btn-email">
 
@@ -25,7 +26,7 @@
         <option>시각디자인과</option>
     </select>
 
-    <input id="finish" type="submit" value="가입하기">
+    <a href="./index.html"><div id="finish" onclick='alert("가입되었습니다.")'>가입하기</div></a>
     <a href="./index.html"><img class="MJMK" src="/images/mjuMark.png" alt="MJMK 로고"></a>
 
     <script src="script.js"></script>
