@@ -26,7 +26,7 @@
                 <button><a href="./MJMK_signup.html">SIGNUP</a></button>
             </div>
             <div>
-                <input type = "submit" value="LOGIN" onclick="submitData()">
+                <input type = "submit" value="LOGIN" onclick={submitData}>
                 <button><a href="./MJMK_department.html">LOGIN</a></button>
             </div>
         </form>
@@ -37,10 +37,6 @@ async function  submitData(){
     var email = $('#email').val();
     var password = $('#password').val();
 
-    jsonObject = {
-        "email":"",
-        "password":""
-    }
     jsonObject.email=email;
     jsonObject.password=password;
 

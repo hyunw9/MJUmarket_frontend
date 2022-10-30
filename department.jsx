@@ -8,7 +8,7 @@ class Login extends React.Component{
         btnColor:true
     }
 }
-useFetch("ec2-3-35-149-126.ap-northeast-2.compute.amazonaws.com/login",{
+useFetch("ec2-3-35-149-126.ap-northeast-2.compute.amazonaws.com/auth/login",{
     method : "POST",
     headers:{
         'Content-type': 'application/json'
