@@ -7,10 +7,12 @@ body {
     display: flex;
     justify-content: center;
     height: 100vh;
-    background: url("../images/v85_55.png") no-repeat center;
+    background: url("images/mjuBackground.png") no-repeat center;
     background-size: cover;
 }
-
+h4 {
+    text-align: center;
+}
 .profile-area {margin-left: 200px;}
 .profile-form {position: relative; z-index: 2;}
 .profile-form input {
