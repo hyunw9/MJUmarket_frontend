@@ -68,6 +68,14 @@ main{
     height: 100px;
     width: 15%;
 }
+#my-name{
+    position:fixed;
+    bottom:1%;
+    left:9%;
+    height: 100px;
+    width: 15%;
+    font-size: larger;
+}
 #my-pro{
     background-color: rgb(187, 210, 210);
     margin: 8px;
