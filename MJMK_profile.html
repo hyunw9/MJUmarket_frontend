@@ -5,22 +5,40 @@
     <link rel = "stylesheet" href="profile.css">
 </head> 
 <body>
-    <img class ="MJMK" src = "images/mjuMark.png">
+<a href="/MJMK_department.html"><img class="MJMK" src="/images/mjuMark.png" alt="MJMK 로고"></a>
     <section class = "profile-form">
-    <form>
-        <div class = "int-area">
-            <input type ="image" name = "imgage" src = "" alt = "프로필X">
-        </div>
-    </form>  
+    <div id="pro-picture"></div>
     </section>
     <div>
-    <div class = "information"><h4>김O중</h4></div> 
+    <div class = "information" id="name"></div> 
     <label class = "information_label">이름</label>
-    <div class = "information"><h4>컴퓨터공학과</h4></div>
+    <div class = "information" id="department"></div>
     <label class = "information_label">학과</label>
+    <div style="color: white; margin: 20px">
+        이메일: <div id="useremail"></div>
+    </div>
+    
     <div class = "posts_label">
     </div>
-    <div class = "posts"></div>
+    <p style="color: white; margin: 20px">쓴 게시물</p>
+    <div class = "posts" id="post"></div>
     </div>
+
+    <script>
+        const user_name = document.querySelector("#name")
+        const user_department = document.querySelector("#department")
+        const content = document.querySelector("#post")
+        const user_email = document.querySelector("#useremail")
+    
+        user_name.innerHTML = window.localStorage.getItem('name')
+        user_department.innerHTML = window.localStorage.getItem('department')
+        user_email.innerHTML = window.localStorage.getItem('email')
+        
+        content.innerHTML= window.localStorage.getItem('postTitle')
+        content.innerHTML += " : "
+        content.innerHTML += window.localStorage.getItem('content')
+        content.innerHTML += " : "
+        content.innerHTML += window.localStorage.getItem('state')
+    </script>
 </body>
 </html>

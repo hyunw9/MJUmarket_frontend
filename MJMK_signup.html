@@ -17,8 +17,8 @@
     <button id="btn-email-check" class="btn-email">인증번호 확인</button>
     <div id="message"></div>
 
-    <input id="username" class="input-area" type="text" placeholder="닉네임">
-    <input id="userpassward" class="input-area" type="password" placeholder="비밀번호">
+    <input id="username" class="input-area" type="text" placeholder="닉네임" autocomplete="on" required>
+    <input id="userpassward" class="input-area" type="password" placeholder="비밀번호" autocomplete="off" required>
 
     <select id="userdepartment" class="input-area" >
         <option selected disabled>-학과를 선택하세요-</option>
@@ -39,7 +39,7 @@
         const password_ = document.getElementById("userpassward").value
         const name_ = document.getElementById("username").value
         const department_ = document.getElementById("userdepartment").value
-        
+
         window.localStorage.setItem('email', email_)
         window.localStorage.setItem('password', password_)
         window.localStorage.setItem('name', name_)

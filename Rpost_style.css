@@ -70,4 +70,6 @@ body {
     width: 100px;
     height: 40px;
     background-color: aliceblue;
+    text-align: center;
+    font-size: larger;
 }
