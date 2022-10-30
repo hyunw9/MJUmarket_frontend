@@ -14,20 +14,18 @@
         <p id="post-title-p">제목</p><div id="rpost-title"></div>
         <p id="price-p">가격</p><div id="rprice"></div>
         <div id="post-content"></div>
-        <select id="sold-state">
-            <option>판매중</option>
-            <option>협의중</option>
-            <option>판매완료</option>
-        </select>
+        <div id="sold-state"></div>
     </main>
 <script>
     const title = document.querySelector("#rpost-title")
     const price = document.querySelector("#rprice")
     const content = document.querySelector("#post-content")
+    const state = document.querySelector("#sold-state")
 
     title.innerHTML = window.localStorage.getItem('postTitle')
     price.innerHTML = window.localStorage.getItem('price')
     content.innerHTML= window.localStorage.getItem('content')
+    state.innerHTML= window.localStorage.getItem('state')
 </script>
 </body>
 </html>
