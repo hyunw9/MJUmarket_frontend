@@ -103,6 +103,7 @@ h1{
   outline: 0;
 }
 #body-title{
+  position: absolute;
   color:white;
   font-size: 50px;
   margin: 3% 34%;
