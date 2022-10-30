@@ -2,9 +2,9 @@ const sendBtn = document.querySelector("#btn-email-send")
 const randomId_ = String(Math.floor(Math.random()*(9-0)+1))+String(Math.floor(Math.random()*(9-0)+1))+String(Math.floor(Math.random()*(9-0)+1))+String(Math.floor(Math.random()*(9-0)+1))+String(Math.floor(Math.random()*(9-0)+1))+String(Math.floor(Math.random()*(9-0)+1));
 const checkBtn = document.querySelector("#btn-email-check")
 
-sendBtn.addEventListener('click', ()=>{
-    alert(String(document.getElementById("#useremail").value).indexOf("mju.ac.kr", 0))
-})
+document.getElementById("btn-email-send").onclick = function() {
+    alert(String(document.getElementById("useremail").value).indexOf("mju.ac.kr", 0))
+}
 
 function sendSuccess(){
     alert("성공적으로 보내졌어요!")
