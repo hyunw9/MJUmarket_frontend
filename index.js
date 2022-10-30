@@ -1,4 +1,5 @@
 import axios from "axios";
+
 async function postData(inputEmail, inputPw) {
   try {
     //응답 성공
@@ -30,3 +31,6 @@ async function submitData() {
       console.log(response.data);
     });
 }
+export default {
+  submitData,
+};
