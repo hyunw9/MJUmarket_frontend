@@ -48,6 +48,8 @@ main{
 }
 #wBtn{
     position: absolute;
+    text-align: center;
+    line-height: 200%;
     bottom:21%;
     left: 1%;
     width: 150px;
