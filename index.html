@@ -32,8 +32,8 @@
         </form>
     </section>
 
-<script>
-function submitData(){
+<script src="index.js">
+async function  submitData(){
     var email = $('#email').val();
     var password = $('#password').val();
 
@@ -45,7 +45,18 @@ function submitData(){
     jsonObject.password=password;
 
     var str=JSON.stringify(jsonObject)
+    try {
+        //응답 성공
+        const response = await axios.post(
+          "http://ec2-13-209-1-61.ap-northeast-2.compute.amazonaws.com:8080/auth/login",str//보내고자 하는 데이터
+        );
+        console.log(response);
+      } catch (error) {
+        //응답 실패
+        console.error(error);
+      }
 }
+
     </script>
 </body>
 </html>
