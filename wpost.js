@@ -6,5 +6,4 @@ function submitPost(){
     window.localStorage.setItem('postTitle', title)
     window.localStorage.setItem('price', price)
     window.localStorage.setItem('content', content)
-    window.localStorage.setItem('pic', content)
 }

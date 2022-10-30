@@ -10,6 +10,7 @@ body {
     overflow: scroll;
     overflow-x: auto;
     margin: 0 0 0 0;
+    background-attachment:fixed;
 }
 main{
     background-color: white;
@@ -17,7 +18,7 @@ main{
     padding: 20px 0 20px 0;
 }
 .MJMK{
-    position: absolute;
+    position:fixed;
     width: 10%;
 }
 #userdepartment {
@@ -47,7 +48,7 @@ main{
     color: white;
 }
 #wBtn{
-    position: absolute;
+    position:fixed;
     text-align: center;
     line-height: 200%;
     bottom:21%;
@@ -60,7 +61,7 @@ main{
     outline: none;
 }
 #mypage{
-    position: absolute;
+    position:fixed;
     background-color: rgb(255, 255, 255);
     bottom:5%;
     left:1%;
