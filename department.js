@@ -5,7 +5,7 @@ function printData(){
     
     axios({
         method: "get",
-        url: "http //ec2-3-35-149-126.ap-northeast-2.compute.amazonaws.com:8080/auth/login",
+        url: "http //ec2-3-35-149-126.ap-northeast-2.compute.amazonaws.com:8080/post/",
         responseType: "json"
     }).then(function (response) {
         document.write(response.title)
