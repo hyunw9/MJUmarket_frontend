@@ -3,19 +3,8 @@ const randomId_ = String(Math.floor(Math.random()*(9-0)+1))+String(Math.floor(Ma
 const checkBtn = document.querySelector("#btn-email-check")
 
 sendBtn.addEventListener('click', ()=>{
-    if(String(document.getElementById("#useremail").value).indexOf("mju.ac.kr", 0)==-1){
-        alert("mju.ac.kr을 사용하세요.")
-    } else{
-
-    const name_ = document.querySelector("#useremail").value
-
-
-    const message_ = "인증번호는: "+ randomId_+ " 입니다.";
-    emailjs.init("user_NfITGtYx2H9AaKpXWJUNw");
-    const templateParams = { name : name_, message : message_}
-    
-    emailjs.send("service_quej9kv", "template_kbrkodl", templateParams).then(sendSuccess, sendFail)
-}})
+    alert(String(document.getElementById("#useremail").value).indexOf("mju.ac.kr", 0))
+})
 
 function sendSuccess(){
     alert("성공적으로 보내졌어요!")
