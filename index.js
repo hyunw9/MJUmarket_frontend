@@ -19,10 +19,6 @@ async function submitData() {
   var email = $("#email").val();
   var password = $("#password").val();
   console.log("함수 받았다 ㅇㅇ");
-  jsonObject.email = email;
-  jsonObject.password = password;
-
-  var str = JSON.stringify(jsonObject);
   //응답 성공
   const response = await axios
     .post(
