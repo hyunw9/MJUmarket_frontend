@@ -18,7 +18,7 @@ async function postData(inputEmail, inputPw) {
 async function submitData() {
   var email = $("#email").val();
   var password = $("#password").val();
-
+  console.log("함수 받았다 ㅇㅇ");
   jsonObject.email = email;
   jsonObject.password = password;
 
