@@ -80,6 +80,9 @@ h1{
 }
 
 #finish {
+  background-color: white;
+  line-height: 250%;
+  text-align: center;
   width: 12%;
   height: 8%;
   color: rgba(0,0,0,1);
@@ -98,4 +101,9 @@ h1{
   color: white;
   border:0;
   outline: 0;
+}
+#body-title{
+  color:white;
+  font-size: 50px;
+  margin: 3% 34%;
 }
